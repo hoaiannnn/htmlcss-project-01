@@ -164,7 +164,19 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 96px;
+    margin-top: 70px;
+}
+
+.client .images a {
+    display: flex;
+    align-items: center;
+    border-radius: 1.2rem;
+    height: 90px;
+    padding: 0 42px;
+}
+
+.client .images a:hover {
+    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
 }
 
 /*============== GUIDES ===============*/
