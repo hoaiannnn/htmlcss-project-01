@@ -69,7 +69,7 @@ a {
     flex-direction: column;
     justify-content: center;
     background: #e6f0ff;
-    height: 100vh;
+    height: calc(100vh - 90px);
 }
 
 .navbar {
@@ -127,7 +127,7 @@ a {
     color: #000336;
     font-size: 6.4rem;
     font-weight: 700;
-    line-height: 7.6rem;
+    line-height: 1.19;
     margin-top: 8px;
 }
 
@@ -313,7 +313,8 @@ a {
 }
 
 .featured .list {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     margin-top: 70px;
 }
@@ -393,6 +394,10 @@ a {
 .stats .img-block,
 .stats .info {
     width: 50%;
+}
+
+.stats .img-block {
+    position: relative;
 }
 
 .stats .img-block .image {
@@ -581,7 +586,7 @@ a {
 }
 
 .footer .row-top {
-    gap: 185px;
+    column-gap: 185px;
 }
 
 .footer .heading {

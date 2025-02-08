@@ -8,6 +8,7 @@
         
         <!-- <link rel="stylesheet" href="./assets/fonts/stylesheet.css" /> -->
         <link rel="stylesheet" href="./assets/css/styles.css" />
+        <link rel="stylesheet" href="./assets/css/responsive.css">
         <!-- lato -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,22 +40,31 @@
         <meta name="theme-color" content="#ffffff">
     </head>
     <body>
-       
-            <!-- ============== HEADER =============== -->
+
+            <!-- PC HEADER -->
              <header class="fixed-header">
                 <div class="content">
                         <!-- navbar -->
                     <nav class="navbar">
+                        <!-- Tablet/mobile menu -->
+                         <label for="menu-checkbox" class="toggle-menu">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor">
+                                <path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/>
+                            </svg>
+                         </label>
+
                         <!-- Logo -->
-                        <a href="#"><img src="./assets/img/logo.svg" alt="Besnik." /></a>
+                        <a class="logo" href="#"><img src="./assets/img/logo.svg" alt="Besnik." /></a>
 
                         <!-- Navigation -->
-                        <ul>
+                        <ul id="pc-nav">
                             <li><a href="#">Home</a></li>
                             <li><a href="#services">Services</a></li>
                             <li><a href="#features">Features</a></li>
                             <li><a href="#resources">Resources</a></li>
                             <li><a href="#contact">Contact</a></li>
+                            <li class="show-on-mobile separate"><a href="#!">Sign in</a></li>
+                            <li class="show-on-mobile"><a href="#!">Sign up</a></li>
                         </ul>
 
                         <!-- Action -->
@@ -65,9 +75,34 @@
                     </nav>
                 </div>
             </header>
+
+            <!-- Tablet/Mobile header -->
+            <header class="mobile-header">
+                <input type="checkbox" name="" id="menu-checkbox" class="menu-checkbox" hidden>
+
+                <!-- Overlay -->
+                <label for="menu-checkbox" class="menu-overlay"></label>
+
+                <!-- Menu content -->
+                 <div class="menu-drawer">
+                     <!-- Logo -->
+                     <a href="#"><img src="./assets/img/logo.svg" alt="Besnik." /></a>
+
+                        <!-- Navigation -->
+                        <ul id="mobile-nav"></ul>
+                        <script>
+                            const pcNav = document.querySelector('#pc-nav');
+                            const mobileNav = document.querySelector('#mobile-nav');
+                            
+                            // Copy form PC nav to Mobile nav
+                            mobileNav.innerHTML = pcNav.innerHTML;
+                        </script>
+                 </div>
+            </header>
+
             <main>
                 <!-- Hero -->        
-            <div class="hero-wrap">
+            <div class="hero-wrap" >
                   <div class="content">
                     <div class="hero">
                         <div class="info">
@@ -112,7 +147,7 @@
                     
                     <div class="row row-2">
                         <p class="desc">More than 45,000+ companies trust besnik</p>
-                        <p class="desc">5 Star Ratings (2k+ Review)</p>
+                        <p class="desc hide-on-mobile">5 Star Ratings (2k+ Review)</p>
                     </div>
                     <div class="images">
                         <a href="#!">
@@ -181,7 +216,7 @@
                         <div class="row">
                             <p class="desc">Everything you need to know when you're looking</p>
                             <a href="#!" class="link">
-                                <span> View All Properties</span>
+                                <span>View All Properties</span>
                                 <img src="./assets/img/guides-arow.svg" alt="arrow" class="arrow">
                             </a>
                     </header>
@@ -244,6 +279,10 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="view-all show-on-mobile">
+                        <a href="#!" class="btn">View All Properties</a>
+                    </div>
                 </div>
              </div>
 
@@ -253,52 +292,53 @@
                     <div class="row">
                         <div class="img-block">
                             <img class="image" src="./assets/img/stats-1.jpg" alt="You’ve found a neighborhood you love.">
-                        </div>
-                        <!-- trend -->
-                        <div class="stats-trend">
-                            <div class="row">
-                                <strong class="value">40,000+</strong>
-                                <img src="./assets/img/vector_stats.svg" alt="" class="icon">
-                            </div>
-                            <p class="desc">By avarage for 2 bedroom apments in San Francisco, CA</p>
-                            <div class="separate"></div>
+                            <!-- trend -->
+                            <div class="stats-trend">
+                                <div class="row">
+                                    <strong class="value">40,000+</strong>
+                                    <img src="./assets/img/vector_stats.svg" alt="" class="icon">
+                                </div>
+                                <p class="desc">By avarage for 2 bedroom apments in San Francisco, CA</p>
+                                <div class="separate"></div>
 
-                            <div class="avatar-block">
-                                <div class="avatar-group">
-                                    <img src="./assets/img/avatar-1.jpg" alt="" class="avatar">
-                                    <img src="./assets/img/avatar-2.jpg" alt="" class="avatar">
-                                </div>
-                                <div class="avatar-group">
-                                    <img src="./assets/img/avatar-1.jpg" alt="" class="avatar">
-                                    <img src="./assets/img/avatar-2.jpg" alt="" class="avatar">
-                                    <img src="./assets/img/avatar-3.jpg" alt="" class="avatar">
-                                    <div class="avatar" style="--bg-color: #24D6D9"><span>A</span></div>
-                                </div>
-                                <div class="avatar-group">
-                                    <img src="./assets/img/avatar-1.jpg" alt="" class="avatar">
-                                    <div class="avatar" style="--bg-color: #F8C120" ><span>R</span></div>
-                                    <img src="./assets/img/avatar-3.jpg" alt="" class="avatar">
-                                </div>
-                                <div class="avatar-group">
-                                    <div class="avatar" style="--bg-color: #F97F6B"><span>L</span></div>
-                                    <img src="./assets/img/avatar-2.jpg" alt="" class="avatar">
-                                    <img src="./assets/img/avatar-3.jpg" alt="" class="avatar">
-                                    <div class="avatar" style="--bg-color: #73A242"><span>S</span></div>
-                                </div>
-                                <div class="avatar-group">
-                                    <img src="./assets/img/avatar-1.jpg" alt="" class="avatar">
-                                    <div class="avatar" style="--bg-color: #1F3BB0"><span>T</span></div>
-                                </div>
-                                <div class="avatar-group">
-                                    <img src="./assets/img/avatar-3.jpg" alt="" class="avatar">
-                                    <img src="./assets/img/avatar-4.jpg" alt="" class="avatar">
-                                </div>
-                                <div class="avatar-group">
-                                    <img src="./assets/img/avatar-5.jpg" alt="" class="avatar">
-                                    <div class="avatar" style="--bg-color: #24D6D9"><span>F</span></div>
+                                <div class="avatar-block">
+                                    <div class="avatar-group">
+                                        <img src="./assets/img/avatar-1.jpg" alt="" class="avatar">
+                                        <img src="./assets/img/avatar-2.jpg" alt="" class="avatar">
+                                    </div>
+                                    <div class="avatar-group">
+                                        <img src="./assets/img/avatar-1.jpg" alt="" class="avatar">
+                                        <img src="./assets/img/avatar-2.jpg" alt="" class="avatar">
+                                        <img src="./assets/img/avatar-3.jpg" alt="" class="avatar">
+                                        <div class="avatar" style="--bg-color: #24D6D9"><span>A</span></div>
+                                    </div>
+                                    <div class="avatar-group">
+                                        <img src="./assets/img/avatar-1.jpg" alt="" class="avatar">
+                                        <div class="avatar" style="--bg-color: #F8C120" ><span>R</span></div>
+                                        <img src="./assets/img/avatar-3.jpg" alt="" class="avatar">
+                                    </div>
+                                    <div class="avatar-group">
+                                        <div class="avatar" style="--bg-color: #F97F6B"><span>L</span></div>
+                                        <img src="./assets/img/avatar-2.jpg" alt="" class="avatar">
+                                        <img src="./assets/img/avatar-3.jpg" alt="" class="avatar">
+                                        <div class="avatar" style="--bg-color: #73A242"><span>S</span></div>
+                                    </div>
+                                    <div class="avatar-group">
+                                        <img src="./assets/img/avatar-1.jpg" alt="" class="avatar">
+                                        <div class="avatar" style="--bg-color: #1F3BB0"><span>T</span></div>
+                                    </div>
+                                    <div class="avatar-group">
+                                        <img src="./assets/img/avatar-3.jpg" alt="" class="avatar">
+                                        <img src="./assets/img/avatar-4.jpg" alt="" class="avatar">
+                                    </div>
+                                    <div class="avatar-group">
+                                        <img src="./assets/img/avatar-5.jpg" alt="" class="avatar">
+                                        <div class="avatar" style="--bg-color: #24D6D9"><span>F</span></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                        
 
                         <div class="info">
                             <h2 class="sub-title">You’ve found a neighborhood you love.</h2>
@@ -335,6 +375,7 @@
                 </div>
              </div>
             </main>
+
             <!-- ============== FOOTER =============== --> 
              <footer class="footer">
                 <div class="content">

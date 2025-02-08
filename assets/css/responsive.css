@@ -1,0 +1,277 @@
+/* PC */
+@media screen and (min-width: 992px) {
+    .mobile-header,
+    .show-on-mobile {
+        display: none;
+    }
+}
+
+/* Tablet & Mobile */
+@media screen and (max-width: 991.98px) {
+    .navbar {
+        position: relative;
+    }
+
+    .navbar .logo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .navbar ul {
+        display: none;
+    }
+
+    .toggle-menu svg {
+        width: 24px;
+        color: #666;
+    }
+
+    .menu-overlay {
+        position: fixed;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.3);
+        z-index: 1;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.5s ease;
+    }
+
+    .menu-drawer {
+        position: fixed;
+        inset: 0 40% 0 0;
+        background-color: #fff;
+        z-index: 2;
+        transform: translateX(-100%);
+        transition: 0.5s ease;
+        padding: 60px;
+    }
+
+    .menu-checkbox:checked ~ .menu-overlay {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .menu-checkbox:checked ~ .menu-drawer {
+        transform: translateX(0);
+    }
+
+    .menu-drawer ul {
+        margin-top: 32px;
+    }
+
+    .menu-drawer ul a {
+        color: #333;
+        display: block;
+        padding: 14px 0;
+        font-weight: 500;
+    }
+
+    .separate {
+        border-top: 1.5px solid #ebebeb;
+    }
+
+    .hero-img {
+        display: none;
+    }
+
+    .hero-wrap .info {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero-wrap .desc {
+        width: 60%;
+        margin: 30px auto auto;
+    }
+
+    .client .images {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .guide-item {
+        flex: 1;
+        margin: 0;
+    }
+
+    .featured .list {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .stats .row {
+        flex-direction: column;
+    }
+
+    .stats .img-block,
+    .stats .info {
+        width: 100%;
+    }
+
+    .stats .img-block {
+        margin-top: 80px;
+        order: 2;
+    }
+
+    .stats .info {
+        order: 1;
+        padding: 0;
+    }
+
+    .stats .sub-title {
+        width: 75%;
+    }
+
+    .stats .info .desc {
+        width: 100%;
+    }
+
+    .stats .row {
+        flex-direction: row;
+    }
+
+    .stats .qty {
+        font-size: 5rem;
+    }
+
+    .stats .qty-desc {
+        font-size: 1.5rem;
+    }
+
+    .subscription .image {
+        display: none;
+    }
+
+    .footer .row-top {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        row-gap: 80px;
+    }
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+    .show-on-mobile {
+        display: none;
+    }
+
+    .stats .row {
+        flex-direction: column;
+    }
+
+    .stats .row-qty {
+        flex-direction: row;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 767.98px) {
+    .hide-on-mobile {
+        display: none;
+    }
+
+    .menu-drawer {
+        inset: 0 25% 0 0;
+        padding: 40px;
+    }
+
+    .navbar .action {
+        display: none;
+    }
+
+    .hero-wrap .title {
+        margin-top: 20px;
+        font-size: 5.2rem;
+    }
+
+    .hero-wrap .desc {
+        width: 100%;
+    }
+
+    .client .images {
+        row-gap: 20px;
+    }
+
+    .list-guide {
+        flex-direction: column;
+        row-gap: 60px;
+    }
+
+    .guide-cta {
+        margin-top: 60px;
+    }
+
+    .featured .link {
+        display: none;
+    }
+
+    .featured .list {
+        grid-template-columns: 1fr;
+    }
+
+    .featured .view-all {
+        margin-top: 60px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .stats .row {
+        flex-direction: column;
+    }
+
+    .stats .sub-title {
+        width: 100%;
+    }
+
+    .stats .img-block .image {
+        width: 100%;
+    }
+
+    .stats-trend {
+        top: 20px;
+        left: 20px;
+        border-radius: 12px;
+    }
+
+    .stats .row {
+        flex-direction: column;
+
+        align-items: center;
+        row-gap: 30px;
+    }
+
+    .stats .qty-desc {
+        text-align: center;
+    }
+
+    .stats .qty {
+        text-align: center;
+    }
+
+    .subscription .info {
+        padding: 32px;
+    }
+
+    .subscription .body {
+        height: auto;
+    }
+
+    .footer .row-top {
+        grid-template-columns: 1fr;
+    }
+
+    .footer .row-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+    }
+
+    .hero-wrap {
+        height: calc(100vh - 80px);
+    }
+
+    .featured .item .label {
+        font-size: 1.2rem;
+    }
+}
